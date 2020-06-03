@@ -1,0 +1,124 @@
+@import '/assets/css/reset.css';
+
+* {
+  box-sizing: border-box;
+
+}
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+  padding: 100px 25px;
+  margin: 0 auto;
+}
+
+button {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+// Js Grid
+
+.grid {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  div {
+    width: 32.33%;
+    margin: 0 .5%;
+    padding: 15px;
+    background: #888;
+    height: 200px;
+    margin-bottom: 1%;
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+
+    &.featured {
+      width: 100%;
+      background: blue;
+      height: 300px;
+
+      &.active {
+        height: 300px;
+      }
+    }
+
+    &.not-active {
+      visibility: collapse;
+      height: 0;
+      opacity: 0;
+      width: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    &.active {
+      visibility: visible;
+      height: 200px;
+      opacity: 1;
+    }
+  }
+}
+
+
+// Lightbox
+
+.lightbox {
+  display: flex;
+  justify-content: space-between;
+
+  .lightbox-item {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    padding: 25px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+
+    .lightbox-content {
+      background: #888;
+      position: absolute;
+      content: '';
+      right: -162px;
+      top: 0;
+
+      opacity: 0;
+      height: 0;
+      width: 0;
+      visibility: collapse;
+
+
+      &:before {
+        position: absolute;
+        left: -12px;
+        top: 0;
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 12px solid #888;
+      }
+    }
+
+    &.active {
+      .lightbox-content {
+        width: 200px;
+        height: 300px;
+        padding: 15px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+
+  }
+}
