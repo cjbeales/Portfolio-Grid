@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Grid</title>
+   <link rel="stylesheet" href="/assets/css/app.css">
+ </head>
+ <body>
+<section class="mywork">
+  <div class="container">
+    <div class="section-left">
+      <h1>My<br>Work</h1>
+      <button data-filter="all" class="filter-btn">All</button>
+      <button data-filter="web" class="filter-btn">Web Project</button>
+      <button data-filter="app" class="filter-btn">App</button>
+      <button data-filter="ux" class="filter-btn">UX/UI</button>
+    </div>
+    <div class="section-right">
+      <div class="section-right__content">
+        <div class="content-block">
+          <div class="grid">
+            <div class="grid-left">
+              <div class="grid-item showcase active" data-filterType="web">Web Featured Item</div>
+              <div data-filterType="app" class="grid-item">App Featured Item</div>
+              <div data-filterType="ux" class="grid-item">UX Featured Item</div>
+            </div>
+            <div class="grid-right">
+              <div data-filterType="web" class="grid-item showcase active">Web item 1</div>
+              <div data-filterType="app" class="grid-item showcase active">App item</div>
+              <div data-filterType="ux" class="grid-item showcase active">UX item</div>
+              <div data-filterType="web" class="grid-item showcase active">Web item 2</div>
+              <div data-filterType="web" class="grid-item">Web item 3</div>
+              <div data-filterType="web" class="grid-item">Web item 4</div>
+              <div data-filterType="app" class="grid-item">App item 2</div>
+              <div data-filterType="app" class="grid-item">App item 3</div>
+              <div data-filterType="app" class="grid-item">App item 4</div>
+              <div data-filterType="ux" class="grid-item">UX item 2</div>
+              <div data-filterType="ux" class="grid-item">UX item 3</div>
+              <div data-filterType="ux" class="grid-item">UX item 4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Scripts -->
+<script src="/assets/js/grid.js"></script>
+ </body>
+ </html>
